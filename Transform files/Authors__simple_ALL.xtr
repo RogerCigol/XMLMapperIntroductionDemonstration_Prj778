@@ -1,0 +1,16 @@
+<XmlTransformation Version="1.0">
+	<Transform Direction="ToCds">
+		<SelectEach dest="DATAPACKET\ROWDATA\ROW" from="\author">
+			<Select dest="@name" Optional="1" from="\name"/>
+			<Select dest="@poit_title" Optional="1" from="\posts\items\title"/>
+			<Select dest="@poit_content" Optional="1" from="\posts\items\content"/>
+			<Select dest="@boit_title" Optional="1" from="\books\items\title"/>
+			<Select dest="@boit_isbn" Optional="1" from="\books\items\isbn"/>
+		</SelectEach>
+	</Transform>
+	<XmlSchema/>
+	<CdsSkeleton/>
+	<XslTransform/>
+	<Skeleton><![CDATA[<?xml version="1.0"?><DATAPACKET Version="2.0"><METADATA><FIELDS><FIELD attrname="name" fieldtype="string" WIDTH="31"/><FIELD attrname="poit_title" fieldtype="string" WIDTH="31"/><FIELD attrname="poit_content" fieldtype="string" WIDTH="31"/><FIELD attrname="boit_title" fieldtype="string" WIDTH="31"/><FIELD attrname="boit_isbn" fieldtype="string" WIDTH="31"/></FIELDS><PARAMS/></METADATA><ROWDATA/></DATAPACKET>
+]]></Skeleton>
+</XmlTransformation>

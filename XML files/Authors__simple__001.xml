@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<author>
+	<name>Roger Swann</name>
+	<posts>
+		<items>
+			<title>XML Mapper Is Good</title>
+			<content>Still needs writing</content>
+		</items>
+	</posts>
+	<books>
+		<items>
+			<title>Introduction to XML Mapper</title>
+			<isbn>123456</isbn>
+		</items>
+	</books>
+</author>

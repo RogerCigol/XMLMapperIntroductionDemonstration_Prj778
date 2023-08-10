@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<author>
+	<name>Mary Scott</name>
+	<posts>
+		<items>
+			<title>Coal Mining in the Twentieth Century</title>
+			<content>History of demise of mining</content>
+		</items>
+	</posts>
+	<books>
+		<items>
+			<title>Growing Organic Vegetables with Slugs</title>
+			<isbn>6543210</isbn>
+		</items>
+	</books>
+</author>

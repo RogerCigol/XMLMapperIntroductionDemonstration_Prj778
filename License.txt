@@ -1,0 +1,14 @@
+File License.txt.
+
+XML Demonstration - written in Embarcadero C++
+
+No license restrictions.
+
+You may use this software as you see fit without any restriction or cost.
+
+No guarantees about it's suitablity for any purpose.
+
+It's a thrown together demonstration.
+
+If you find it useful then please acknowledge
+Roger Swann as the author in your code.

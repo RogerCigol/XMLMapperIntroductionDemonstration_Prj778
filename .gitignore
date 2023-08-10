@@ -1,0 +1,49 @@
+# This file is used to ignore files which are generated
+# ----------------------------------------------------------------------------
+#
+# RAS - TransformDemo.exe - Cigol Controls Limited - www.cigol.com
+#
+# 10/08/23 Added __recovery/ __astcache/ __history/
+#
+#
+# Binaries
+# --------
+#
+*.exe
+# 
+# Build files
+#
+*.tds 
+*.ilc 
+*.ild 
+*.ilf 
+*.ils 
+*.~* 
+*.$$$
+&.@@@
+#
+# any Win32 directory
+Win32/
+# any Win64 directory
+Win64/
+#
+# any Win32 directory
+Win32/
+#
+# any intermediate output directories
+Debug/
+Release/
+#
+#
+# any editor support directories
+__history/
+__astcache/
+__recovery/
+#
+#
+# Editor files
+#
+*.dsk
+*.local
+#
+#############################################################################
