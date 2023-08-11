@@ -13,20 +13,24 @@ TForm1 *Form1;
 
 //---------------------------------------------------------------------------
 
-const String Directory = "D:\\Projects\\MVP 778\\XML-mapper\\C code for project xml\\";
+String BaseDirectory;
 
-const String SourceXML_1 = Directory + String("XML files\\Authors__simple__001.xml");
-const String SourceXML_2 = Directory + String("XML files\\Authors__simple__002.xml");
+const String SourceXML_1 = String("XML files\\Authors__simple__001.xml");
+const String SourceXML_2 = String("XML files\\Authors__simple__002.xml");
 
-const String TransformFile = Directory + String("Transform files\\Authors__simple_ALL.xtr");
+const String TransformFile = String("Transform files\\Authors__simple_ALL.xtr");
 
 //---------------------------------------------------------------------------
+
 __fastcall TForm1::TForm1(TComponent* Owner)
    : TForm(Owner)
 {
-   XMLTransform1->TransformationFile = TransformFile;
+   BaseDirectory = ExtractFilePath(Application->ExeName);
+   XMLTransform1->TransformationFile = BaseDirectory + PathDelim + TransformFile;
 }
+
 //---------------------------------------------------------------------------
+
 void __fastcall TForm1::ClearButtonClick(TObject *Sender)
 {
    if (FDMemTable1->Active) {
@@ -41,14 +45,13 @@ void __fastcall TForm1::ClearButtonClick(TObject *Sender)
 
 void TForm1::Update(String XMLFile)
 {
-   XMLTransform1->SourceXmlFile = XMLFile;
+   XMLTransform1->SourceXmlFile = BaseDirectory + PathDelim + XMLFile;
    ClientDataSet1->XMLData = XMLTransform1->Data;
    if ((FDMemTable1->Active) && (!AppendCheckBox->Checked)) {
       FDMemTable1->EmptyDataSet();
    }
    FDBatchMove1->Execute();
 }
-
 
 //---------------------------------------------------------------------------
 
